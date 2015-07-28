@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WifiConnector
+namespace WifiManager
 {
     public partial class MainWindow : Form
     {

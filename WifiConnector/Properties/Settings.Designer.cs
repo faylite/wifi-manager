@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WifiConnector.Properties
+namespace WifiManager.Properties
 {
 
 

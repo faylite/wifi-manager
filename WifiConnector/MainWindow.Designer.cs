@@ -1,4 +1,4 @@
-﻿namespace WifiConnector
+﻿namespace WifiManager
 {
     partial class MainWindow
     {
