@@ -2,7 +2,7 @@
 A wifi manager for Windows created in C#
 
 #WARNING
-This application currently stores you network passwords in clear text,
+This application currently stores your network passwords in clear text,
 remember to delete the data folder when you are done transferring configurations to another computer
 
 #Legal
