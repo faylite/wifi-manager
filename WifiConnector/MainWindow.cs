@@ -12,21 +12,25 @@ namespace WifiConnector
 {
     public partial class MainWindow : Form
     {
-		private WifiImporter importer;
+		private ProfileImporter importer;
+		private ProfileExporter exporter;
+		private IOHandler io;
 
         public MainWindow()
         {
             InitializeComponent();
 
-			importer = new WifiImporter();
+			importer = new ProfileImporter();
 			tbWiFiList.Text = importer.getListOfWifiNetworks();
+			exporter = new ProfileExporter();
+
+			io = new IOHandler();
+			io.createFolders();
         }
 
 		private void listWifi(object sender, EventArgs e)
 		{
-			toolStripStatus.Text = "Getting list of available local wifi configurations...";
 			tbWiFiList.Text = importer.getListOfWifiNetworks();
-			toolStripStatus.Text = "Done.";
 		}
 
 		private void MainWindow_Load(object sender, EventArgs e)
@@ -36,8 +40,12 @@ namespace WifiConnector
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			toolStripStatus.Text = "Exiting....";
 			Application.Exit();
+		}
+
+		private void btnExportAll_Click(object sender, EventArgs e)
+		{
+			exporter.exportProfiles(importer.getListOfProfiles());
 		}
 	}
 }

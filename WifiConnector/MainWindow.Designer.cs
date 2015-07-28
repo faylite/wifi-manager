@@ -37,6 +37,7 @@
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.label1 = new System.Windows.Forms.Label();
+			this.btnExportAll = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -123,11 +124,22 @@
 			this.label1.TabIndex = 5;
 			this.label1.Text = "Available Wifi Configurations";
 			// 
+			// btnExportAll
+			// 
+			this.btnExportAll.Location = new System.Drawing.Point(13, 60);
+			this.btnExportAll.Name = "btnExportAll";
+			this.btnExportAll.Size = new System.Drawing.Size(400, 77);
+			this.btnExportAll.TabIndex = 6;
+			this.btnExportAll.Text = "Export All Profiles";
+			this.btnExportAll.UseVisualStyleBackColor = true;
+			this.btnExportAll.Click += new System.EventHandler(this.btnExportAll_Click);
+			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(686, 447);
+			this.Controls.Add(this.btnExportAll);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.tbWiFiList);
 			this.Controls.Add(this.btnUpdateList);
@@ -158,6 +170,7 @@
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnExportAll;
 	}
 }
 

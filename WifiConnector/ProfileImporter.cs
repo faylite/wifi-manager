@@ -7,13 +7,13 @@ using System.Text.RegularExpressions;
 
 namespace WifiConnector
 {
-    class WifiImporter
+    class ProfileImporter
     {
         string cmdListStoredWifi = "/c netsh wlan show profiles";
 		//string regexWifiName = "(?::\\s:?)\\w+\\n";
 		string regexWifiName = ":\\s\\w+";
 
-        public WifiImporter()
+        public ProfileImporter()
         {
         }
 
@@ -22,6 +22,16 @@ namespace WifiConnector
 
 		}
 		public string getListOfWifiNetworks()
+		{
+			// Return string
+			string rs = "";
+			foreach (string s in getListOfProfiles())
+			{
+				rs += s + "\r\n";
+			}
+			return rs;
+		}
+		public List<string> getListOfProfiles()
 		{
 			// Get the netsh wlan profiles
 			string netshOutput = getNetshWlanProfiles();
@@ -37,17 +47,11 @@ namespace WifiConnector
 					wifiList.Add(capture);
 				}
 			}
-			// Remove duplicate AP names
-			wifiList = wifiList.Distinct().ToList();
-			// Return string
-			string rs = "";
-			foreach (string s in wifiList)
-			{
-				rs += s + "\r\n";
-			}
-
-			return rs;
+			// Return a list with no duplicate profiles
+			// In case of multiple Wifi cards
+			return wifiList.Distinct().ToList();
 		}
+
 		public string getNetshWlanProfiles()
 		{
 			System.Diagnostics.Process proc = new System.Diagnostics.Process();
