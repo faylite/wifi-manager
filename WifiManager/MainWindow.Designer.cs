@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.btnUpdateList = new System.Windows.Forms.Button();
+			this.btnUpdateExportList = new System.Windows.Forms.Button();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,33 +39,33 @@
 			this.lbLocalProfileList = new System.Windows.Forms.CheckedListBox();
 			this.tcMainTabs = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.button2 = new System.Windows.Forms.Button();
-			this.btImportSelectedProfiles = new System.Windows.Forms.Button();
+			this.btUpdateStored = new System.Windows.Forms.Button();
+			this.btImportSelected = new System.Windows.Forms.Button();
 			this.lbAvailableProfileList = new System.Windows.Forms.CheckedListBox();
-			this.btImportAllProfiles = new System.Windows.Forms.Button();
+			this.btImportAll = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btExportSelected = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.tcMainTabs.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// btnUpdateList
+			// btnUpdateExportList
 			// 
-			this.btnUpdateList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btnUpdateExportList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnUpdateList.AutoSize = true;
-			this.btnUpdateList.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btnUpdateList.Location = new System.Drawing.Point(448, 292);
-			this.btnUpdateList.Name = "btnUpdateList";
-			this.btnUpdateList.Size = new System.Drawing.Size(200, 68);
-			this.btnUpdateList.TabIndex = 1;
-			this.btnUpdateList.Text = "Update Configuration List";
-			this.btnUpdateList.UseVisualStyleBackColor = true;
-			this.btnUpdateList.Click += new System.EventHandler(this.listWifi);
+			this.btnUpdateExportList.AutoSize = true;
+			this.btnUpdateExportList.Cursor = System.Windows.Forms.Cursors.Default;
+			this.btnUpdateExportList.Location = new System.Drawing.Point(448, 292);
+			this.btnUpdateExportList.Name = "btnUpdateExportList";
+			this.btnUpdateExportList.Size = new System.Drawing.Size(200, 68);
+			this.btnUpdateExportList.TabIndex = 1;
+			this.btnUpdateExportList.Text = "Update Configuration List";
+			this.btnUpdateExportList.UseVisualStyleBackColor = true;
+			this.btnUpdateExportList.Click += new System.EventHandler(this.listWifi);
 			// 
 			// menuStrip1
 			// 
@@ -148,10 +148,10 @@
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.button2);
-			this.tabPage1.Controls.Add(this.btImportSelectedProfiles);
+			this.tabPage1.Controls.Add(this.btUpdateStored);
+			this.tabPage1.Controls.Add(this.btImportSelected);
 			this.tabPage1.Controls.Add(this.lbAvailableProfileList);
-			this.tabPage1.Controls.Add(this.btImportAllProfiles);
+			this.tabPage1.Controls.Add(this.btImportAll);
 			this.tabPage1.Controls.Add(this.label2);
 			this.tabPage1.Location = new System.Drawing.Point(4, 25);
 			this.tabPage1.Name = "tabPage1";
@@ -161,29 +161,29 @@
 			this.tabPage1.Text = "Import";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// btUpdateStored
 			// 
-			this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.btUpdateStored.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.button2.AutoSize = true;
-			this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-			this.button2.Location = new System.Drawing.Point(448, 292);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(200, 68);
-			this.button2.TabIndex = 14;
-			this.button2.Text = "Update Configuration List";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btUpdateStored.AutoSize = true;
+			this.btUpdateStored.Cursor = System.Windows.Forms.Cursors.Default;
+			this.btUpdateStored.Location = new System.Drawing.Point(448, 292);
+			this.btUpdateStored.Name = "btUpdateStored";
+			this.btUpdateStored.Size = new System.Drawing.Size(200, 68);
+			this.btUpdateStored.TabIndex = 14;
+			this.btUpdateStored.Text = "Update Configuration List";
+			this.btUpdateStored.UseVisualStyleBackColor = true;
 			// 
-			// btImportSelectedProfiles
+			// btImportSelected
 			// 
-			this.btImportSelectedProfiles.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btImportSelectedProfiles.Location = new System.Drawing.Point(6, 292);
-			this.btImportSelectedProfiles.Name = "btImportSelectedProfiles";
-			this.btImportSelectedProfiles.Size = new System.Drawing.Size(200, 68);
-			this.btImportSelectedProfiles.TabIndex = 13;
-			this.btImportSelectedProfiles.Text = "Import Selected Configurations";
-			this.btImportSelectedProfiles.UseVisualStyleBackColor = true;
+			this.btImportSelected.Cursor = System.Windows.Forms.Cursors.Default;
+			this.btImportSelected.Location = new System.Drawing.Point(6, 292);
+			this.btImportSelected.Name = "btImportSelected";
+			this.btImportSelected.Size = new System.Drawing.Size(200, 68);
+			this.btImportSelected.TabIndex = 13;
+			this.btImportSelected.Text = "Import Selected Configurations";
+			this.btImportSelected.UseVisualStyleBackColor = true;
 			// 
 			// lbAvailableProfileList
 			// 
@@ -193,15 +193,15 @@
 			this.lbAvailableProfileList.Size = new System.Drawing.Size(642, 259);
 			this.lbAvailableProfileList.TabIndex = 12;
 			// 
-			// btImportAllProfiles
+			// btImportAll
 			// 
-			this.btImportAllProfiles.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btImportAllProfiles.Location = new System.Drawing.Point(227, 292);
-			this.btImportAllProfiles.Name = "btImportAllProfiles";
-			this.btImportAllProfiles.Size = new System.Drawing.Size(200, 68);
-			this.btImportAllProfiles.TabIndex = 11;
-			this.btImportAllProfiles.Text = "Import All Configurations";
-			this.btImportAllProfiles.UseVisualStyleBackColor = true;
+			this.btImportAll.Cursor = System.Windows.Forms.Cursors.Default;
+			this.btImportAll.Location = new System.Drawing.Point(227, 292);
+			this.btImportAll.Name = "btImportAll";
+			this.btImportAll.Size = new System.Drawing.Size(200, 68);
+			this.btImportAll.TabIndex = 11;
+			this.btImportAll.Text = "Import All Configurations";
+			this.btImportAll.UseVisualStyleBackColor = true;
 			// 
 			// label2
 			// 
@@ -214,11 +214,11 @@
 			// 
 			// tabPage2
 			// 
-			this.tabPage2.Controls.Add(this.button1);
+			this.tabPage2.Controls.Add(this.btExportSelected);
 			this.tabPage2.Controls.Add(this.lbLocalProfileList);
 			this.tabPage2.Controls.Add(this.btnExportAll);
 			this.tabPage2.Controls.Add(this.label1);
-			this.tabPage2.Controls.Add(this.btnUpdateList);
+			this.tabPage2.Controls.Add(this.btnUpdateExportList);
 			this.tabPage2.Location = new System.Drawing.Point(4, 25);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -227,15 +227,15 @@
 			this.tabPage2.Text = "Export";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// btExportSelected
 			// 
-			this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-			this.button1.Location = new System.Drawing.Point(6, 292);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(200, 68);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "Export Selected Configurations";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btExportSelected.Cursor = System.Windows.Forms.Cursors.Default;
+			this.btExportSelected.Location = new System.Drawing.Point(6, 292);
+			this.btExportSelected.Name = "btExportSelected";
+			this.btExportSelected.Size = new System.Drawing.Size(200, 68);
+			this.btExportSelected.TabIndex = 8;
+			this.btExportSelected.Text = "Export Selected Configurations";
+			this.btExportSelected.UseVisualStyleBackColor = true;
 			// 
 			// MainWindow
 			// 
@@ -266,7 +266,7 @@
 
 		#endregion
 		
-		private System.Windows.Forms.Button btnUpdateList;
+		private System.Windows.Forms.Button btnUpdateExportList;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -278,12 +278,12 @@
 		private System.Windows.Forms.TabControl tcMainTabs;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button btImportSelectedProfiles;
+		private System.Windows.Forms.Button btExportSelected;
+		private System.Windows.Forms.Button btImportSelected;
 		private System.Windows.Forms.CheckedListBox lbAvailableProfileList;
-		private System.Windows.Forms.Button btImportAllProfiles;
+		private System.Windows.Forms.Button btImportAll;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btUpdateStored;
 	}
 }
 
