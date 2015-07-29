@@ -21,7 +21,7 @@ namespace WifiManager
             InitializeComponent();
 
 			importer = new ProfileImporter();
-			tbWiFiList.Text = importer.getListOfWifiNetworks();
+			listWifi(null, null);
 			exporter = new ProfileExporter();
 
 			io = new IOHandler();
@@ -30,7 +30,11 @@ namespace WifiManager
 
 		private void listWifi(object sender, EventArgs e)
 		{
-			tbWiFiList.Text = importer.getListOfWifiNetworks();
+			lbLocalProfileList.Items.Clear();
+			foreach(string s in importer.getListOfProfiles())
+			{
+				lbLocalProfileList.Items.Add(s);
+			}
 		}
 
 		private void MainWindow_Load(object sender, EventArgs e)
