@@ -40,13 +40,13 @@
 			this.lbLocalProfileList = new System.Windows.Forms.CheckedListBox();
 			this.tcMainTabs = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.button1 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
 			this.btImportSelectedProfiles = new System.Windows.Forms.Button();
 			this.lbAvailableProfileList = new System.Windows.Forms.CheckedListBox();
 			this.btImportAllProfiles = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.button1 = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.tcMainTabs.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -91,7 +91,7 @@
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
@@ -107,13 +107,13 @@
 			// helpToolStripMenuItem
 			// 
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
 			this.helpToolStripMenuItem.Text = "Help";
 			// 
 			// aboutToolStripMenuItem1
 			// 
 			this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+			this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(125, 26);
 			this.aboutToolStripMenuItem1.Text = "About";
 			// 
 			// label1
@@ -121,9 +121,9 @@
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(6, 3);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(293, 17);
+			this.label1.Size = new System.Drawing.Size(354, 17);
 			this.label1.TabIndex = 5;
-			this.label1.Text = "WiFi Configurations available on this machine";
+			this.label1.Text = "Choose WiFi configurations to export from this machine";
 			// 
 			// btnExportAll
 			// 
@@ -169,30 +169,19 @@
 			this.tabPage1.Text = "Import";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// tabPage2
+			// button2
 			// 
-			this.tabPage2.Controls.Add(this.button1);
-			this.tabPage2.Controls.Add(this.lbLocalProfileList);
-			this.tabPage2.Controls.Add(this.btnExportAll);
-			this.tabPage2.Controls.Add(this.label1);
-			this.tabPage2.Controls.Add(this.btnUpdateList);
-			this.tabPage2.Location = new System.Drawing.Point(4, 25);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(654, 366);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Export";
-			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// button1
-			// 
-			this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-			this.button1.Location = new System.Drawing.Point(6, 292);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(200, 68);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "Export Selected Configurations";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.button2.AutoSize = true;
+			this.button2.Cursor = System.Windows.Forms.Cursors.Default;
+			this.button2.Location = new System.Drawing.Point(448, 292);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(200, 68);
+			this.button2.TabIndex = 14;
+			this.button2.Text = "Update Configuration List";
+			this.button2.UseVisualStyleBackColor = true;
 			// 
 			// btImportSelectedProfiles
 			// 
@@ -227,23 +216,34 @@
 			this.label2.AutoSize = true;
 			this.label2.Location = new System.Drawing.Point(6, 5);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(254, 17);
+			this.label2.Size = new System.Drawing.Size(338, 17);
 			this.label2.TabIndex = 10;
-			this.label2.Text = "WiFi Configurations available for import";
+			this.label2.Text = "Choose WiFi configurations to import to this machine";
 			// 
-			// button2
+			// tabPage2
 			// 
-			this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.button2.AutoSize = true;
-			this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-			this.button2.Location = new System.Drawing.Point(448, 292);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(200, 68);
-			this.button2.TabIndex = 14;
-			this.button2.Text = "Update Configuration List";
-			this.button2.UseVisualStyleBackColor = true;
+			this.tabPage2.Controls.Add(this.button1);
+			this.tabPage2.Controls.Add(this.lbLocalProfileList);
+			this.tabPage2.Controls.Add(this.btnExportAll);
+			this.tabPage2.Controls.Add(this.label1);
+			this.tabPage2.Controls.Add(this.btnUpdateList);
+			this.tabPage2.Location = new System.Drawing.Point(4, 25);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(654, 366);
+			this.tabPage2.TabIndex = 1;
+			this.tabPage2.Text = "Export";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			this.button1.Cursor = System.Windows.Forms.Cursors.Default;
+			this.button1.Location = new System.Drawing.Point(6, 292);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(200, 68);
+			this.button1.TabIndex = 8;
+			this.button1.Text = "Export Selected Configurations";
+			this.button1.UseVisualStyleBackColor = true;
 			// 
 			// MainWindow
 			// 

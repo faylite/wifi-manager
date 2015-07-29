@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WifiManager
 {
+	/// <summary>
+	/// This class exports profiles on the current machine to the ./data/conf directory
+	/// </summary>
 	class ProfileExporter
 	{
 		// Export the profiles provided in the list

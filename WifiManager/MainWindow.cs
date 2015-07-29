@@ -14,6 +14,7 @@ namespace WifiManager
     {
 		private ProfileImporter importer;
 		private ProfileExporter exporter;
+		private ProfileInfo info;
 		private IOHandler io;
 
         public MainWindow()
@@ -21,17 +22,20 @@ namespace WifiManager
             InitializeComponent();
 
 			importer = new ProfileImporter();
-			listWifi(null, null);
 			exporter = new ProfileExporter();
-
+			info = new ProfileInfo();
 			io = new IOHandler();
+			// Create data folder if not already created
 			io.createFolders();
+
+			// Update the list of available profiles on start, good UX people ;)
+			listWifi(null, null);
         }
 
 		private void listWifi(object sender, EventArgs e)
 		{
 			lbLocalProfileList.Items.Clear();
-			foreach(string s in importer.getListOfProfiles())
+			foreach(string s in info.getLocalProfileList())
 			{
 				lbLocalProfileList.Items.Add(s);
 			}
@@ -49,7 +53,7 @@ namespace WifiManager
 
 		private void btnExportAll_Click(object sender, EventArgs e)
 		{
-			exporter.exportProfiles(importer.getListOfProfiles());
+			exporter.exportProfiles(info.getLocalProfileList());
 		}
 	}
 }
