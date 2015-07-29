@@ -15,7 +15,7 @@ namespace WifiManager
 		/// Gets the output from getNetshWlanProfiles() uses regex to get the network profile names, 
 		/// and returns a list of the available network profiles on the current machine
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>A string list with network profile names</returns>
 		public List<String> getLocalProfileList()
 		{
 			// Get the netsh wlan profiles

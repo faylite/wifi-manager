@@ -55,5 +55,13 @@ namespace WifiManager
 		{
 			exporter.exportProfiles(info.getLocalProfileList());
 		}
+
+		private void btExportSelected_Click(object sender, EventArgs e)
+		{
+			foreach (String s in lbLocalProfileList.CheckedItems)
+			{
+				exporter.exportProfile(s);
+			}
+		}
 	}
 }

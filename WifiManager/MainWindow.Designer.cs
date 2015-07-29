@@ -236,6 +236,7 @@
 			this.btExportSelected.TabIndex = 8;
 			this.btExportSelected.Text = "Export Selected Configurations";
 			this.btExportSelected.UseVisualStyleBackColor = true;
+			this.btExportSelected.Click += new System.EventHandler(this.btExportSelected_Click);
 			// 
 			// MainWindow
 			// 
