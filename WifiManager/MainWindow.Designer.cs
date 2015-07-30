@@ -65,7 +65,7 @@
 			this.btnUpdateExportList.TabIndex = 1;
 			this.btnUpdateExportList.Text = "Update Configuration List";
 			this.btnUpdateExportList.UseVisualStyleBackColor = true;
-			this.btnUpdateExportList.Click += new System.EventHandler(this.listWifi);
+			this.btnUpdateExportList.Click += new System.EventHandler(this.listLocalProfiles);
 			// 
 			// menuStrip1
 			// 
@@ -174,6 +174,7 @@
 			this.btUpdateStored.TabIndex = 14;
 			this.btUpdateStored.Text = "Update Configuration List";
 			this.btUpdateStored.UseVisualStyleBackColor = true;
+			this.btUpdateStored.Click += new System.EventHandler(this.listStoredProfiles);
 			// 
 			// btImportSelected
 			// 

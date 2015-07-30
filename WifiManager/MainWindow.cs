@@ -15,7 +15,6 @@ namespace WifiManager
 		private ProfileImporter importer;
 		private ProfileExporter exporter;
 		private ProfileInfo info;
-		private IOHandler io;
 
         public MainWindow()
         {
@@ -24,15 +23,25 @@ namespace WifiManager
 			importer = new ProfileImporter();
 			exporter = new ProfileExporter();
 			info = new ProfileInfo();
-			io = new IOHandler();
+			
 			// Create data folder if not already created
-			io.createFolders();
+			IOHandler.createFolders();
 
 			// Update the list of available profiles on start, good UX people ;)
-			listWifi(null, null);
+			listStoredProfiles(null, null);
+			listLocalProfiles(null, null);
         }
 
-		private void listWifi(object sender, EventArgs e)
+		private void listStoredProfiles(object sender, EventArgs e)
+		{
+			lbAvailableProfileList.Items.Clear();
+			foreach(string s in info.getStoredProfileList())
+			{
+				lbAvailableProfileList.Items.Add(s);
+			}
+		}
+
+		private void listLocalProfiles(object sender, EventArgs e)
 		{
 			lbLocalProfileList.Items.Clear();
 			foreach(string s in info.getLocalProfileList())

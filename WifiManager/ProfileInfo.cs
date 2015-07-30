@@ -11,6 +11,12 @@ namespace WifiManager
 	/// </summary>
 	class ProfileInfo
 	{
+		public List<String> getStoredProfileList()
+		{
+			// TODO: Remove interface name and file extension
+			return IOHandler.getStoredConfigFileNames();
+		}
+
 		/// <summary>
 		/// Gets the output from getNetshWlanProfiles() uses regex to get the network profile names, 
 		/// and returns a list of the available network profiles on the current machine

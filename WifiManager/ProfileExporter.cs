@@ -26,7 +26,7 @@ namespace WifiManager
 			string exportCommand = (
 				"/c netsh wlan export profile " +
 				profileName + " " +
-				IOHandler.networkConfDir +
+				IOHandler.profileFolder +
 				" key=clear"
 			);
 
