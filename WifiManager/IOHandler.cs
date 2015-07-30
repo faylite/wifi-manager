@@ -41,14 +41,7 @@ namespace WifiManager
 		/// <returns>A list of full paths to the profiles in the conf directory</returns>
 		public static List<String> getStoredConfigFilesWithPath()
 		{
-			List<String> returnBuilder = new List<String>();
-			string[] configFiles = System.IO.Directory.GetFiles((profileFolder), "*.xml");
-
-			for (int i = 0; i < configFiles.Length; i++)
-			{
-				returnBuilder.Add(configFiles[i]);
-			}
-			return returnBuilder;
+			return System.IO.Directory.GetFiles((profileFolder), "*.xml").ToList();
 		}
 
 		/// <summary>
@@ -69,7 +62,7 @@ namespace WifiManager
 			}
 			catch (IOException ioex)
 			{
-				Console.WriteLine();
+				Console.WriteLine(ioex);
 			}
 		}
 	}
