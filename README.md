@@ -1,9 +1,14 @@
 # Wifi Manager
 A wifi manager for Windows created in C#
+Since Windows 8 and later Microsoft removed the ability to export the network profiles to a usb drive
+and import it on other computers.
+This program provides a nice GUI alternative to using netsh commands in the command line.
+The progam is designed to run from a usb drive and is portable, so you can carry it around and
+add/export profiles to new computers with ease.
 
-#WARNING
+####WARNING
 This application currently stores your network passwords in clear text,
-remember to delete the data folder when you are done transferring configurations to another computer
+remember to keep your usb drive safe and delete the data when you aren't going to use it
 
 #Legal
 This project is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) license
