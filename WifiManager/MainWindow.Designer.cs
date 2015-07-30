@@ -46,6 +46,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.btExportSelected = new System.Windows.Forms.Button();
+			this.deleteDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.tcMainTabs.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -82,6 +83,7 @@
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteDataToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
@@ -241,6 +243,13 @@
 			this.btExportSelected.UseVisualStyleBackColor = true;
 			this.btExportSelected.Click += new System.EventHandler(this.btExportSelected_Click);
 			// 
+			// deleteDataToolStripMenuItem
+			// 
+			this.deleteDataToolStripMenuItem.Name = "deleteDataToolStripMenuItem";
+			this.deleteDataToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+			this.deleteDataToolStripMenuItem.Text = "Delete All Stored Configurations";
+			this.deleteDataToolStripMenuItem.Click += new System.EventHandler(this.deleteDataToolStripMenuItem_Click);
+			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +297,7 @@
 		private System.Windows.Forms.Button btImportAll;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btUpdateStored;
+		private System.Windows.Forms.ToolStripMenuItem deleteDataToolStripMenuItem;
 	}
 }
 

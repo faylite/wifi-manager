@@ -50,5 +50,27 @@ namespace WifiManager
 			}
 			return returnBuilder;
 		}
+
+		/// <summary>
+		/// Clears all the profiles stored by the program
+		/// </summary>
+		public static void clearAllStoredProfiles()
+		{
+			foreach (string s in getStoredConfigFilesWithPath())
+			{
+				deleteStoredProfile(s);
+			}
+		}
+		public static void deleteStoredProfile(string filePath)
+		{
+			try
+			{
+				File.Delete(filePath);
+			}
+			catch (IOException ioex)
+			{
+				Console.WriteLine();
+			}
+		}
 	}
 }
