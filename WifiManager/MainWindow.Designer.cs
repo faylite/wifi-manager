@@ -185,6 +185,7 @@
 			this.btImportSelected.TabIndex = 13;
 			this.btImportSelected.Text = "Import Selected Configurations";
 			this.btImportSelected.UseVisualStyleBackColor = true;
+			this.btImportSelected.Click += new System.EventHandler(this.btImportSelected_Click);
 			// 
 			// lbAvailableProfileList
 			// 
@@ -203,6 +204,7 @@
 			this.btImportAll.TabIndex = 11;
 			this.btImportAll.Text = "Import All Configurations";
 			this.btImportAll.UseVisualStyleBackColor = true;
+			this.btImportAll.Click += new System.EventHandler(this.btImportAll_Click);
 			// 
 			// label2
 			// 

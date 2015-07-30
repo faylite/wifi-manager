@@ -63,6 +63,7 @@ namespace WifiManager
 		private void btnExportAll_Click(object sender, EventArgs e)
 		{
 			exporter.exportProfiles(info.getLocalProfileList());
+			listStoredProfiles(null, null);
 		}
 
 		private void btExportSelected_Click(object sender, EventArgs e)
@@ -70,6 +71,23 @@ namespace WifiManager
 			foreach (String s in lbLocalProfileList.CheckedItems)
 			{
 				exporter.exportProfile(s);
+			}
+			listStoredProfiles(null, null);
+		}
+
+		private void btImportAll_Click(object sender, EventArgs e)
+		{
+			foreach (String s in info.getStoredProfileList())
+			{
+				importer.importProfile(s);
+			}
+		}
+
+		private void btImportSelected_Click(object sender, EventArgs e)
+		{
+			foreach (string s in lbAvailableProfileList.CheckedItems)
+			{
+				importer.importProfile(s);
 			}
 		}
 	}
