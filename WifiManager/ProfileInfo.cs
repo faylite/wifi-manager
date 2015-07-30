@@ -11,6 +11,11 @@ namespace WifiManager
 	/// </summary>
 	class ProfileInfo
 	{
+		/// <summary>
+		/// Calls IOHandler.getStoredConfigFielNames() and filters out the interface name and file extension,
+		/// and returns a String List with the profile names
+		/// </summary>
+		/// <returns>A String List with stored profile names</returns>
 		public List<String> getStoredProfileList()
 		{
 			List<String> returnBuilder = new List<String>();
@@ -19,7 +24,6 @@ namespace WifiManager
 				Match match = Regex.Match(s, @"(?:^\w+-)(\w+)(?:\.xml$)", RegexOptions.IgnoreCase);
 				returnBuilder.Add(match.Groups[1].Value);
 			}
-
 			return returnBuilder;
 		}
 
@@ -27,7 +31,7 @@ namespace WifiManager
 		/// Gets the output from getNetshWlanProfiles() uses regex to get the network profile names, 
 		/// and returns a list of the available network profiles on the current machine
 		/// </summary>
-		/// <returns>A string list with network profile names</returns>
+		/// <returns>A string list with local network profile names</returns>
 		public List<String> getLocalProfileList()
 		{
 			// Get the netsh wlan profiles
