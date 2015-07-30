@@ -94,6 +94,7 @@ namespace WifiManager
 		private void deleteDataToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			IOHandler.clearAllStoredProfiles();
+			listStoredProfiles(null, null);
 		}
 	}
 }
