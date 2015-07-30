@@ -13,7 +13,7 @@ namespace WifiManager
     public partial class MainWindow : Form
     {
 
-		private static string programName = "Wifi Manger";
+		private static string programName = "Wifi Manager";
 
 		private static int vMajor = 1;
 		private static int vMinor = 1;
