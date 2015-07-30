@@ -13,14 +13,14 @@ namespace WifiManager
 	{
 		public List<String> getStoredProfileList()
 		{
-			// TODO: Remove interface name and file extension
 			List<String> returnBuilder = new List<String>();
 			foreach(string s in IOHandler.getStoredConfigFileNames())
 			{
-
+				Match match = Regex.Match(s, @"(?:^\w+-)(\w+)(?:\.xml$)", RegexOptions.IgnoreCase);
+				returnBuilder.Add(match.Groups[1].Value);
 			}
 
-			return IOHandler.getStoredConfigFileNames();
+			return returnBuilder;
 		}
 
 		/// <summary>
