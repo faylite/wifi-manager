@@ -14,6 +14,12 @@ namespace WifiManager
 		public List<String> getStoredProfileList()
 		{
 			// TODO: Remove interface name and file extension
+			List<String> returnBuilder = new List<String>();
+			foreach(string s in IOHandler.getStoredConfigFileNames())
+			{
+
+			}
+
 			return IOHandler.getStoredConfigFileNames();
 		}
 
@@ -29,14 +35,10 @@ namespace WifiManager
 			List<string> wifiList = new List<string>();
 
 			// Find all the AP names and put them into the wifiList
-			MatchCollection matches = Regex.Matches(netshOutput, ":\\s\\w+");
+			MatchCollection matches = Regex.Matches(netshOutput, @"(?::\s)(\w+)", RegexOptions.IgnoreCase);
             foreach (Match m in matches)
 			{
-				foreach (Capture c in m.Captures)
-				{
-					string capture = c.Value.Replace(": ", "");
-					wifiList.Add(capture);
-				}
+				wifiList.Add(m.Groups[1].Value);
 			}
 			// Return a list with no duplicate profiles
 			// In case of multiple Wifi cards
