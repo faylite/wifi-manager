@@ -21,8 +21,8 @@ namespace WifiManager
 		}
 
 		/// <summary>
-		/// Searches trough the network conf directory and returns a list
-		/// of file names for the available configurations
+		/// Calls getStoredConfigFilesWithPath() and filters out the full file path
+		/// and returns the file names only
 		/// </summary>
 		/// <returns>A list of filenames for the network config files</returns>
 		public static List<String> getStoredConfigFileNames()
@@ -35,6 +35,10 @@ namespace WifiManager
 			return returnBuilder;
 		}
 
+		/// <summary>
+		/// Searches the conf directory and returns a list of full paths with the files
+		/// </summary>
+		/// <returns>A list of full paths to the profiles in the conf directory</returns>
 		public static List<String> getStoredConfigFilesWithPath()
 		{
 			List<String> returnBuilder = new List<String>();
