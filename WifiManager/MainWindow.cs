@@ -12,6 +12,21 @@ namespace WifiManager
 {
     public partial class MainWindow : Form
     {
+
+		private static string programName = "Wifi Manger";
+
+		private static int vMajor = 1;
+		private static int vMinor = 1;
+		private static int vHotfix = 0;
+#if DEBUG
+		private static string release = " Debug";
+#else
+		private static string release = "";
+#endif
+		private static string version = vMajor + "." + vMinor + "."+ vHotfix + release;
+
+		private string author = "By: Benjamin (Faylite)";
+
 		private ProfileImporter importer;
 		private ProfileExporter exporter;
 		private ProfileInfo info;
@@ -101,6 +116,11 @@ namespace WifiManager
 		{
 			listStoredProfiles(null, null);
 			listLocalProfiles(null, null);
+		}
+
+		private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show((programName + " " + version + "\r\n\r\n" + author), "About");
 		}
 	}
 }
