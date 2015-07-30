@@ -96,5 +96,11 @@ namespace WifiManager
 			IOHandler.clearAllStoredProfiles();
 			listStoredProfiles(null, null);
 		}
+
+		private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			listStoredProfiles(null, null);
+			listLocalProfiles(null, null);
+		}
 	}
 }

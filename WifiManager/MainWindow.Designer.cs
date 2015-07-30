@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.btnUpdateExportList = new System.Windows.Forms.Button();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.deleteDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,34 +39,18 @@
 			this.lbLocalProfileList = new System.Windows.Forms.CheckedListBox();
 			this.tcMainTabs = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.btUpdateStored = new System.Windows.Forms.Button();
 			this.btImportSelected = new System.Windows.Forms.Button();
 			this.lbAvailableProfileList = new System.Windows.Forms.CheckedListBox();
 			this.btImportAll = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.btExportSelected = new System.Windows.Forms.Button();
-			this.deleteDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.tcMainTabs.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// btnUpdateExportList
-			// 
-			this.btnUpdateExportList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnUpdateExportList.AutoSize = true;
-			this.btnUpdateExportList.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btnUpdateExportList.Location = new System.Drawing.Point(448, 292);
-			this.btnUpdateExportList.Name = "btnUpdateExportList";
-			this.btnUpdateExportList.Size = new System.Drawing.Size(200, 68);
-			this.btnUpdateExportList.TabIndex = 1;
-			this.btnUpdateExportList.Text = "Update Configuration List";
-			this.btnUpdateExportList.UseVisualStyleBackColor = true;
-			this.btnUpdateExportList.Click += new System.EventHandler(this.listLocalProfiles);
 			// 
 			// menuStrip1
 			// 
@@ -76,23 +60,31 @@
             this.aboutToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(686, 28);
+			this.menuStrip1.Size = new System.Drawing.Size(467, 28);
 			this.menuStrip1.TabIndex = 3;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem,
             this.deleteDataToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
 			this.fileToolStripMenuItem.Text = "File";
 			// 
+			// deleteDataToolStripMenuItem
+			// 
+			this.deleteDataToolStripMenuItem.Name = "deleteDataToolStripMenuItem";
+			this.deleteDataToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+			this.deleteDataToolStripMenuItem.Text = "Delete All Stored Configurations";
+			this.deleteDataToolStripMenuItem.Click += new System.EventHandler(this.deleteDataToolStripMenuItem_Click);
+			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
@@ -122,7 +114,7 @@
 			// btnExportAll
 			// 
 			this.btnExportAll.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btnExportAll.Location = new System.Drawing.Point(227, 292);
+			this.btnExportAll.Location = new System.Drawing.Point(227, 288);
 			this.btnExportAll.Name = "btnExportAll";
 			this.btnExportAll.Size = new System.Drawing.Size(200, 68);
 			this.btnExportAll.TabIndex = 6;
@@ -133,24 +125,23 @@
 			// lbLocalProfileList
 			// 
 			this.lbLocalProfileList.FormattingEnabled = true;
-			this.lbLocalProfileList.Location = new System.Drawing.Point(3, 23);
+			this.lbLocalProfileList.Location = new System.Drawing.Point(6, 23);
 			this.lbLocalProfileList.Name = "lbLocalProfileList";
-			this.lbLocalProfileList.Size = new System.Drawing.Size(645, 259);
+			this.lbLocalProfileList.Size = new System.Drawing.Size(421, 259);
 			this.lbLocalProfileList.TabIndex = 7;
 			// 
 			// tcMainTabs
 			// 
 			this.tcMainTabs.Controls.Add(this.tabPage1);
 			this.tcMainTabs.Controls.Add(this.tabPage2);
-			this.tcMainTabs.Location = new System.Drawing.Point(12, 40);
+			this.tcMainTabs.Location = new System.Drawing.Point(12, 31);
 			this.tcMainTabs.Name = "tcMainTabs";
 			this.tcMainTabs.SelectedIndex = 0;
-			this.tcMainTabs.Size = new System.Drawing.Size(662, 395);
+			this.tcMainTabs.Size = new System.Drawing.Size(443, 391);
 			this.tcMainTabs.TabIndex = 8;
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.btUpdateStored);
 			this.tabPage1.Controls.Add(this.btImportSelected);
 			this.tabPage1.Controls.Add(this.lbAvailableProfileList);
 			this.tabPage1.Controls.Add(this.btImportAll);
@@ -158,30 +149,15 @@
 			this.tabPage1.Location = new System.Drawing.Point(4, 25);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(654, 366);
+			this.tabPage1.Size = new System.Drawing.Size(435, 362);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Import";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// btUpdateStored
-			// 
-			this.btUpdateStored.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.btUpdateStored.AutoSize = true;
-			this.btUpdateStored.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btUpdateStored.Location = new System.Drawing.Point(448, 292);
-			this.btUpdateStored.Name = "btUpdateStored";
-			this.btUpdateStored.Size = new System.Drawing.Size(200, 68);
-			this.btUpdateStored.TabIndex = 14;
-			this.btUpdateStored.Text = "Update Configuration List";
-			this.btUpdateStored.UseVisualStyleBackColor = true;
-			this.btUpdateStored.Click += new System.EventHandler(this.listStoredProfiles);
-			// 
 			// btImportSelected
 			// 
 			this.btImportSelected.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btImportSelected.Location = new System.Drawing.Point(6, 292);
+			this.btImportSelected.Location = new System.Drawing.Point(6, 288);
 			this.btImportSelected.Name = "btImportSelected";
 			this.btImportSelected.Size = new System.Drawing.Size(200, 68);
 			this.btImportSelected.TabIndex = 13;
@@ -192,15 +168,15 @@
 			// lbAvailableProfileList
 			// 
 			this.lbAvailableProfileList.FormattingEnabled = true;
-			this.lbAvailableProfileList.Location = new System.Drawing.Point(6, 25);
+			this.lbAvailableProfileList.Location = new System.Drawing.Point(6, 23);
 			this.lbAvailableProfileList.Name = "lbAvailableProfileList";
-			this.lbAvailableProfileList.Size = new System.Drawing.Size(642, 259);
+			this.lbAvailableProfileList.Size = new System.Drawing.Size(421, 259);
 			this.lbAvailableProfileList.TabIndex = 12;
 			// 
 			// btImportAll
 			// 
 			this.btImportAll.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btImportAll.Location = new System.Drawing.Point(227, 292);
+			this.btImportAll.Location = new System.Drawing.Point(227, 288);
 			this.btImportAll.Name = "btImportAll";
 			this.btImportAll.Size = new System.Drawing.Size(200, 68);
 			this.btImportAll.TabIndex = 11;
@@ -211,7 +187,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(6, 5);
+			this.label2.Location = new System.Drawing.Point(6, 3);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(338, 17);
 			this.label2.TabIndex = 10;
@@ -223,11 +199,10 @@
 			this.tabPage2.Controls.Add(this.lbLocalProfileList);
 			this.tabPage2.Controls.Add(this.btnExportAll);
 			this.tabPage2.Controls.Add(this.label1);
-			this.tabPage2.Controls.Add(this.btnUpdateExportList);
 			this.tabPage2.Location = new System.Drawing.Point(4, 25);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(654, 366);
+			this.tabPage2.Size = new System.Drawing.Size(435, 362);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Export";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -235,7 +210,7 @@
 			// btExportSelected
 			// 
 			this.btExportSelected.Cursor = System.Windows.Forms.Cursors.Default;
-			this.btExportSelected.Location = new System.Drawing.Point(6, 292);
+			this.btExportSelected.Location = new System.Drawing.Point(6, 288);
 			this.btExportSelected.Name = "btExportSelected";
 			this.btExportSelected.Size = new System.Drawing.Size(200, 68);
 			this.btExportSelected.TabIndex = 8;
@@ -243,18 +218,18 @@
 			this.btExportSelected.UseVisualStyleBackColor = true;
 			this.btExportSelected.Click += new System.EventHandler(this.btExportSelected_Click);
 			// 
-			// deleteDataToolStripMenuItem
+			// refreshToolStripMenuItem
 			// 
-			this.deleteDataToolStripMenuItem.Name = "deleteDataToolStripMenuItem";
-			this.deleteDataToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
-			this.deleteDataToolStripMenuItem.Text = "Delete All Stored Configurations";
-			this.deleteDataToolStripMenuItem.Click += new System.EventHandler(this.deleteDataToolStripMenuItem_Click);
+			this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+			this.refreshToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+			this.refreshToolStripMenuItem.Text = "Refresh";
+			this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
 			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(686, 447);
+			this.ClientSize = new System.Drawing.Size(467, 435);
 			this.Controls.Add(this.tcMainTabs);
 			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -278,8 +253,6 @@
         }
 
 		#endregion
-		
-		private System.Windows.Forms.Button btnUpdateExportList;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -296,8 +269,8 @@
 		private System.Windows.Forms.CheckedListBox lbAvailableProfileList;
 		private System.Windows.Forms.Button btImportAll;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button btUpdateStored;
 		private System.Windows.Forms.ToolStripMenuItem deleteDataToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
 	}
 }
 
