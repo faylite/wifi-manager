@@ -35,6 +35,7 @@ namespace WifiManager
 			List<string> wifiList = new List<string>();
 
 			// Find all the AP names and put them into the wifiList
+			// TODO: Check if the regex works with multiple profiles, I only had one profile on my machine
 			MatchCollection matches = Regex.Matches(netshOutput, @"(?::\s)(\w+)", RegexOptions.IgnoreCase);
             foreach (Match m in matches)
 			{
