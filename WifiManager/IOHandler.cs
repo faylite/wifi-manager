@@ -11,8 +11,8 @@ namespace WifiManager
 	{
 		public static string exePath = AppDomain.CurrentDomain.BaseDirectory;
 
-		public static string dataFolder = exePath + "data";
-		public static string profileFolder = dataFolder + "\\conf";
+		public static string dataFolder = exePath + "data"; // Data folder location
+		public static string profileFolder = dataFolder + "\\profiles"; // Stored profiles location
 
 		public static void CreateFolders()
 		{
