@@ -51,7 +51,7 @@ namespace WifiManager
 		{
 			foreach (string s in GetStoredConfigFilesWithPath())
 			{
-				deleteStoredProfile(s);
+				DeleteStoredProfile(s);
 			}
 		}
 		public static void DeleteStoredProfile(string filePath)

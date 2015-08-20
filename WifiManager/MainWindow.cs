@@ -40,7 +40,7 @@ namespace WifiManager
 			info = new ProfileInfo();
 			
 			// Create data folder if not already created
-			IOHandler.createFolders();
+			IOHandler.CreateFolders();
 
 			// Update the list of available profiles on start, good UX people ;)
 			ListStoredProfiles(null, null);
@@ -50,7 +50,7 @@ namespace WifiManager
 		private void ListStoredProfiles(object sender, EventArgs e)
 		{
 			lbAvailableProfileList.Items.Clear();
-			foreach(string s in info.getStoredProfileList())
+			foreach(string s in info.GetStoredProfileList())
 			{
 				lbAvailableProfileList.Items.Add(s);
 			}
@@ -59,7 +59,7 @@ namespace WifiManager
 		private void ListLocalProfiles(object sender, EventArgs e)
 		{
 			lbLocalProfileList.Items.Clear();
-			foreach(string s in info.getLocalProfileList())
+			foreach(string s in info.GetLocalProfileList())
 			{
 				lbLocalProfileList.Items.Add(s);
 			}
@@ -77,7 +77,7 @@ namespace WifiManager
 
 		private void btnExportAll_Click(object sender, EventArgs e)
 		{
-			exporter.exportProfiles(info.getLocalProfileList());
+			exporter.ExportProfiles(info.GetLocalProfileList());
 			ListStoredProfiles(null, null);
 		}
 
@@ -85,16 +85,16 @@ namespace WifiManager
 		{
 			foreach (String s in lbLocalProfileList.CheckedItems)
 			{
-				exporter.exportProfile(s);
+				exporter.ExportProfile(s);
 			}
 			ListStoredProfiles(null, null);
 		}
 
 		private void btImportAll_Click(object sender, EventArgs e)
 		{
-			foreach (String s in info.getStoredProfileList())
+			foreach (String s in info.GetStoredProfileList())
 			{
-				importer.importProfile(s);
+				importer.ImportProfile(s);
 			}
 		}
 
@@ -102,13 +102,13 @@ namespace WifiManager
 		{
 			foreach (string s in lbAvailableProfileList.CheckedItems)
 			{
-				importer.importProfile(s);
+				importer.ImportProfile(s);
 			}
 		}
 
 		private void deleteDataToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			IOHandler.clearAllStoredProfiles();
+			IOHandler.ClearAllStoredProfiles();
 			ListStoredProfiles(null, null);
 		}
 

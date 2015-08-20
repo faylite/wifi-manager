@@ -14,7 +14,7 @@ namespace WifiManager
     {
 		public void ImportProfile(string profileName)
 		{
-			foreach(string s in IOHandler.getStoredConfigFilesWithPath())
+			foreach(string s in IOHandler.GetStoredConfigFilesWithPath())
 			{
 				Match match = Regex.Match(s, @"(?:\w+-)(\w+)(?:.xml$)", RegexOptions.IgnoreCase);
 				if(match.Groups[1].Success)
