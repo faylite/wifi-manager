@@ -12,14 +12,14 @@ namespace WifiManager
 	class ProfileInfo
 	{
 		/// <summary>
-		/// Calls IOHandler.getStoredConfigFielNames() and filters out the interface name and file extension,
+		/// Calls IOHandler.GetStoredConfigFielNames() and filters out the interface name and file extension,
 		/// and returns a String List with the profile names
 		/// </summary>
 		/// <returns>A String List with stored profile names</returns>
-		public List<String> getStoredProfileList()
+		public List<String> GetStoredProfileList()
 		{
 			List<String> returnBuilder = new List<String>();
-			foreach(string s in IOHandler.getStoredConfigFileNames())
+			foreach(string s in IOHandler.GetStoredConfigFileNames())
 			{
 				Match match = Regex.Match(s, @"(?:^\w+-)(\w+)(?:\.xml$)", RegexOptions.IgnoreCase);
 				returnBuilder.Add(match.Groups[1].Value);
@@ -28,14 +28,14 @@ namespace WifiManager
 		}
 
 		/// <summary>
-		/// Gets the output from getNetshWlanProfiles() uses regex to get the network profile names, 
+		/// Gets the output from GetNetshWlanProfiles() uses regex to get the network profile names, 
 		/// and returns a list of the available network profiles on the current machine
 		/// </summary>
 		/// <returns>A string list with local network profile names</returns>
-		public List<String> getLocalProfileList()
+		public List<String> GetLocalProfileList()
 		{
 			// Get the netsh wlan profiles
-			string netshOutput = getNetshWlanProfiles();
+			string netshOutput = GetNetshWlanProfiles();
 			List<string> wifiList = new List<string>();
 
 			// Find all the AP names and put them into the wifiList
@@ -54,7 +54,7 @@ namespace WifiManager
 		/// Runs a netsh command to get all the network profiles on the current machine
 		/// </summary>
 		/// <returns>Raw output from the cmd command</returns>
-		public string getNetshWlanProfiles()
+		public string GetNetshWlanProfiles()
 		{
 			System.Diagnostics.Process proc = new System.Diagnostics.Process();
 			proc.StartInfo.FileName = "cmd.exe";

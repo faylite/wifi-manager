@@ -12,18 +12,18 @@ namespace WifiManager
 	/// </summary>
     class ProfileImporter
     {
-		public void importProfile(string profileName)
+		public void ImportProfile(string profileName)
 		{
 			foreach(string s in IOHandler.getStoredConfigFilesWithPath())
 			{
 				Match match = Regex.Match(s, @"(?:\w+-)(\w+)(?:.xml$)", RegexOptions.IgnoreCase);
 				if(match.Groups[1].Success)
 				{
-					importProfileCmd(s);
+					ImportProfileCmd(s);
 				}
 			}
 		}
-		private void importProfileCmd(string filePath)
+		private void ImportProfileCmd(string filePath)
 		{
 			System.Diagnostics.Process proc = new System.Diagnostics.Process();
 			proc.StartInfo.FileName = "cmd.exe";

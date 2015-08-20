@@ -43,11 +43,11 @@ namespace WifiManager
 			IOHandler.createFolders();
 
 			// Update the list of available profiles on start, good UX people ;)
-			listStoredProfiles(null, null);
-			listLocalProfiles(null, null);
+			ListStoredProfiles(null, null);
+			ListLocalProfiles(null, null);
         }
 
-		private void listStoredProfiles(object sender, EventArgs e)
+		private void ListStoredProfiles(object sender, EventArgs e)
 		{
 			lbAvailableProfileList.Items.Clear();
 			foreach(string s in info.getStoredProfileList())
@@ -56,7 +56,7 @@ namespace WifiManager
 			}
 		}
 
-		private void listLocalProfiles(object sender, EventArgs e)
+		private void ListLocalProfiles(object sender, EventArgs e)
 		{
 			lbLocalProfileList.Items.Clear();
 			foreach(string s in info.getLocalProfileList())
@@ -78,7 +78,7 @@ namespace WifiManager
 		private void btnExportAll_Click(object sender, EventArgs e)
 		{
 			exporter.exportProfiles(info.getLocalProfileList());
-			listStoredProfiles(null, null);
+			ListStoredProfiles(null, null);
 		}
 
 		private void btExportSelected_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace WifiManager
 			{
 				exporter.exportProfile(s);
 			}
-			listStoredProfiles(null, null);
+			ListStoredProfiles(null, null);
 		}
 
 		private void btImportAll_Click(object sender, EventArgs e)
@@ -109,13 +109,13 @@ namespace WifiManager
 		private void deleteDataToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			IOHandler.clearAllStoredProfiles();
-			listStoredProfiles(null, null);
+			ListStoredProfiles(null, null);
 		}
 
 		private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			listStoredProfiles(null, null);
-			listLocalProfiles(null, null);
+			ListStoredProfiles(null, null);
+			ListLocalProfiles(null, null);
 		}
 
 		private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)

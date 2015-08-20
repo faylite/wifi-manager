@@ -12,22 +12,22 @@ namespace WifiManager
 	class ProfileExporter
 	{
 		// Export the profiles provided in the list
-		public void exportProfiles(List<string> profileNames)
+		public void ExportProfiles(List<string> profileNames)
 		{
 			foreach (string s in profileNames)
 			{
-				exportProfile(s);
+				ExportProfile(s);
 			}
 		}
 
 		// Exports the provided profile
-		public void exportProfile(string profileName)
+		public void ExportProfile(string profileName)
 		{
 			string exportCommand = (
-				"/c netsh wlan export profile " +
-				profileName + " " +
-				IOHandler.profileFolder +
-				" key=clear"
+				"/c netsh wlan export profile " + // Profile export command
+				profileName + " " +	// The name of the profile to export
+				IOHandler.profileFolder + // Folder to put exported profile in
+				" key=clear" // Get network profile password in clear text
 			);
 
 			System.Diagnostics.Process proc = new System.Diagnostics.Process();

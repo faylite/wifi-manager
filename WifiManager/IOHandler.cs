@@ -14,21 +14,21 @@ namespace WifiManager
 		public static string dataFolder = exePath + "data";
 		public static string profileFolder = dataFolder + "\\conf";
 
-		public static void createFolders()
+		public static void CreateFolders()
 		{
 			System.IO.Directory.CreateDirectory(dataFolder);
 			System.IO.Directory.CreateDirectory(profileFolder);
 		}
 
 		/// <summary>
-		/// Calls getStoredConfigFilesWithPath() and filters out the full file path
+		/// Calls GetStoredConfigFilesWithPath() and filters out the full file path
 		/// and returns the file names only
 		/// </summary>
 		/// <returns>A list of filenames for the network config files</returns>
-		public static List<String> getStoredConfigFileNames()
+		public static List<String> GetStoredConfigFileNames()
 		{
 			List<String> returnBuilder = new List<string>();
-			foreach (string s in getStoredConfigFilesWithPath())
+			foreach (string s in GetStoredConfigFilesWithPath())
 			{
 				returnBuilder.Add(Path.GetFileName(s));
 			}
@@ -39,7 +39,7 @@ namespace WifiManager
 		/// Searches the conf directory and returns a list of full paths with the files
 		/// </summary>
 		/// <returns>A list of full paths to the profiles in the conf directory</returns>
-		public static List<String> getStoredConfigFilesWithPath()
+		public static List<String> GetStoredConfigFilesWithPath()
 		{
 			return System.IO.Directory.GetFiles((profileFolder), "*.xml").ToList();
 		}
@@ -47,14 +47,14 @@ namespace WifiManager
 		/// <summary>
 		/// Clears all the profiles stored by the program
 		/// </summary>
-		public static void clearAllStoredProfiles()
+		public static void ClearAllStoredProfiles()
 		{
-			foreach (string s in getStoredConfigFilesWithPath())
+			foreach (string s in GetStoredConfigFilesWithPath())
 			{
 				deleteStoredProfile(s);
 			}
 		}
-		public static void deleteStoredProfile(string filePath)
+		public static void DeleteStoredProfile(string filePath)
 		{
 			try
 			{
