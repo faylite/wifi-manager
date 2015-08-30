@@ -21,7 +21,7 @@ namespace WifiManager
 			List<String> returnBuilder = new List<String>();
 			foreach(string s in IOHandler.GetStoredConfigFileNames())
 			{
-				Match match = Regex.Match(s, @"(?:^\w+-)(\w+)(?:\.xml$)", RegexOptions.IgnoreCase);
+				Match match = Regex.Match(s, @"(?:^\w+-)(.*)(?:\.xml$)", RegexOptions.IgnoreCase);
 				returnBuilder.Add(match.Groups[1].Value);
 			}
 			return returnBuilder;
