@@ -39,11 +39,11 @@ namespace WifiManager
 			List<string> wifiList = new List<string>();
 
 			// Find all the AP names and put them into the wifiList
-			// TODO: Check if the regex works with multiple profiles, I only had one profile on my machine
-			MatchCollection matches = Regex.Matches(netshOutput, @"(?::\s)(\w+)", RegexOptions.IgnoreCase);
+			MatchCollection matches = Regex.Matches(netshOutput, @"(?::\s)(.*)", RegexOptions.IgnoreCase);
             foreach (Match m in matches)
 			{
-				wifiList.Add(m.Groups[1].Value);
+				if (m.Groups[1].Value.Length > 1)
+					wifiList.Add(m.Groups[1].Value);
 			}
 			// Return a list with no duplicate profiles
 			// In case of multiple Wifi cards
