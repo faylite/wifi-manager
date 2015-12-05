@@ -1,4 +1,9 @@
-![Build Status](https://benvev95.visualstudio.com/DefaultCollection/_apis/public/build/definitions/49df59e0-87ce-4415-9f4d-bfb7976f0491/1/badge)
+######Master Build Status
+![Build Status](https://faylite.visualstudio.com/DefaultCollection/_apis/public/build/definitions/49df59e0-87ce-4415-9f4d-bfb7976f0491/1/badge)
+
+######Dev Build Status
+![Build Status](https://faylite.visualstudio.com/DefaultCollection/_apis/public/build/definitions/49df59e0-87ce-4415-9f4d-bfb7976f0491/2/badge)
+
 
 # Wifi Manager
 A wifi manager for Windows created in C#
