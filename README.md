@@ -1,3 +1,5 @@
+![Build Status](https://benvev95.visualstudio.com/DefaultCollection/_apis/public/build/definitions/49df59e0-87ce-4415-9f4d-bfb7976f0491/1/badge)
+
 # Wifi Manager
 A wifi manager for Windows created in C#
 Since Windows 8 and later Microsoft removed the ability to export the network profiles to a usb drive
