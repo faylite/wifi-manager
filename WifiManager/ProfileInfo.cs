@@ -18,11 +18,15 @@ namespace WifiManager
 		/// <returns>A String List with stored profile names</returns>
 		public List<String> GetStoredProfileList()
 		{
+			XmlReader xmlReader = new XmlReader();
+
 			List<String> returnBuilder = new List<String>();
-			foreach(string s in IOHandler.GetStoredConfigFileNames())
+			foreach(string s in IOHandler.GetStoredConfigFilesWithPath())
 			{
-				Match match = Regex.Match(s, @"(?:^\w+-)(.*)(?:\.xml$)", RegexOptions.IgnoreCase);
-				returnBuilder.Add(match.Groups[1].Value);
+				// Match match = Regex.Match(s, @"(?:^\w+-)(.*)(?:\.xml$)", RegexOptions.IgnoreCase);
+				// returnBuilder.Add(match.Groups[1].Value);
+
+				returnBuilder.Add(xmlReader.GetProfileName(s));
 			}
 			return returnBuilder;
 		}

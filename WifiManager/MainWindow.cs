@@ -16,7 +16,7 @@ namespace WifiManager
 		private static string programName = "Wifi Manager";
 
 		private static int vMajor = 1;
-		private static int vMinor = 1;
+		private static int vMinor = 2;
 		private static int vHotfix = 0;
 #if DEBUG
 		private static string release = " Debug";
@@ -52,7 +52,15 @@ namespace WifiManager
 			lbAvailableProfileList.Items.Clear();
 			foreach(string s in info.GetStoredProfileList())
 			{
-				lbAvailableProfileList.Items.Add(s);
+				try
+				{
+					lbAvailableProfileList.Items.Add(s);
+				}
+				catch (ArgumentNullException)
+				{
+					// Break if there were no arguments to add
+					break;
+				}
 			}
 		}
 
