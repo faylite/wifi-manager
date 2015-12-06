@@ -52,7 +52,15 @@ namespace WifiManager
 			lbAvailableProfileList.Items.Clear();
 			foreach(string s in info.GetStoredProfileList())
 			{
-				lbAvailableProfileList.Items.Add(s);
+				try
+				{
+					lbAvailableProfileList.Items.Add(s);
+				}
+				catch (ArgumentNullException)
+				{
+					// Break if there were no arguments to add
+					break;
+				}
 			}
 		}
 
