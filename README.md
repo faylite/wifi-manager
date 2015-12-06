@@ -21,7 +21,7 @@ remember to keep your usb drive safe and delete the data when you aren't going t
 Downloads can be found on dropbox for now, the releases will probably be moved in the future. And I can't
 guarantee it will contain the latest build, I recommend building it yourself.
 
-[Downloads](bit.ly/Faylite-WifiManager)
+[Downloads](https://bit.ly/Faylite-WifiManager)
 
 #Legal
 This project is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) license
