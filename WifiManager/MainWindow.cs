@@ -16,7 +16,7 @@ namespace WifiManager
 		private static string programName = "Wifi Manager";
 
 		private static int vMajor = 1;
-		private static int vMinor = 1;
+		private static int vMinor = 2;
 		private static int vHotfix = 0;
 #if DEBUG
 		private static string release = " Debug";
