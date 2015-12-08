@@ -18,8 +18,7 @@ namespace WifiManager
 			{
 				// Use xml reader to find profile name in xml file instead of using filename that contains interface name
 				XmlReader xmlReader = new XmlReader();
-				Match match = Regex.Match(xmlReader.GetProfileName(s), @"(\w+)", RegexOptions.IgnoreCase);
-				if(match.Groups[1].Success)
+				if(profileName == xmlReader.GetProfileName(s))
 				{
 					ImportProfileCmd(s);
 				}
