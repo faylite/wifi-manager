@@ -16,7 +16,9 @@ namespace WifiManager
 		{
 			foreach(string s in IOHandler.GetStoredConfigFilesWithPath())
 			{
-				Match match = Regex.Match(s, @"(?:\w+-)(\w+)(?:.xml$)", RegexOptions.IgnoreCase);
+				// Use xml reader to find profile name in xml file instead of using filename that contains interface name
+				XmlReader xmlReader = new XmlReader();
+				Match match = Regex.Match(xmlReader.GetProfileName(s), @"(\w+)", RegexOptions.IgnoreCase);
 				if(match.Groups[1].Success)
 				{
 					ImportProfileCmd(s);
