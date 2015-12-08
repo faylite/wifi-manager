@@ -100,7 +100,7 @@ namespace WifiManager
 
 		private void btImportAll_Click(object sender, EventArgs e)
 		{
-			foreach (String s in info.GetStoredProfileList())
+			foreach (string s in lbAvailableProfileList.Items)
 			{
 				importer.ImportProfile(s);
 			}
