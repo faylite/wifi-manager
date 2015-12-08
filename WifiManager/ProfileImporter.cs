@@ -28,7 +28,7 @@ namespace WifiManager
 		{
 			System.Diagnostics.Process proc = new System.Diagnostics.Process();
 			proc.StartInfo.FileName = "cmd.exe";
-			proc.StartInfo.Arguments = "/c netsh wlan add profile " + filePath;
+			proc.StartInfo.Arguments = "/c netsh wlan add profile \"" + filePath + "\"";
 			proc.StartInfo.UseShellExecute = false;
 			proc.StartInfo.CreateNoWindow = true;
 			proc.StartInfo.RedirectStandardOutput = true;
