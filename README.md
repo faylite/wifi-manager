@@ -1,7 +1,7 @@
-######Master Build Status
+###### Master Build Status
 ![Build Status](https://faylite.visualstudio.com/DefaultCollection/_apis/public/build/definitions/49df59e0-87ce-4415-9f4d-bfb7976f0491/1/badge)
 
-######Dev Build Status
+###### Dev Build Status
 ![Build Status](https://faylite.visualstudio.com/DefaultCollection/_apis/public/build/definitions/49df59e0-87ce-4415-9f4d-bfb7976f0491/2/badge)
 
 
@@ -13,15 +13,15 @@ This program provides a nice GUI alternative to using netsh commands in the comm
 The progam is designed to run from a usb drive and is portable, so you can carry it around and
 add/export profiles to new computers with ease.
 
-####WARNING
+#### WARNING
 This application currently stores your network passwords in clear text,
 remember to keep your usb drive safe and delete the data when you aren't going to use it
 
-####Download
+#### Download
 Downloads can be found on dropbox for now, the releases will probably be moved in the future. And I can't
 guarantee it will contain the latest build, I recommend building it yourself.
 
 [Downloads](https://bit.ly/Faylite-WifiManager)
 
-#Legal
+#### Legal
 This project is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) license
